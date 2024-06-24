@@ -1,0 +1,111 @@
+site_name: "Шпоргалка/черновик по СУБД Postgres"
+site_author: "None"
+site_description: >-
+  Шпоргалка/черновик по СУБД Postgres
+
+repo_name: antoshinai/postgresql-ss-dbms
+repo_url: https://github.com/Antongitproject/postgres_draft_book.git
+edit_uri: ""
+
+use_directory_urls: false
+
+copyright: Составители:Антошин Антон Игоревич
+
+nav:
+#    - 'Инсталляция, настройка и эксплуатация СУБД PostgreSQL"': 'index.md'
+#    - 'Общие положения': 'Body/main.md'
+#    - 'Термины, определения и сокращения': 'Body/terms.md'
+#    - 'Описание типовой схемы инсталляции СУБД': 'Body/type_schema.md'
+#    - 'Подготовка сервера к инсталляции СУБД PostgreSQL': 'Body/min_requirements.md'
+#    - 'Ручная инсталляция типовой конфигурации СУБД:':
+#      - 'Установка СУБД': 'Body/manual_installation.md'
+#      - 'Установка кластерного ПО': 'Body/pcs_cluster_installation.md'
+#      - 'Организация кворума в кластере БД': 'Body/quorum-node3.md'
+#      - 'Настройка фенсинга': 'Body/watchdog.md'
+
+plugins:
+  - autolinks
+  - search:
+      lang:
+        - en
+        - ru
+  - section-index
+  - table-reader
+  - thumbnails:
+      style: margin-top:5px;margin-bottom:5px;margin-right:25px  
+  - git-revision-date-localized
+  - git-revision-date
+  - macros
+  - minify:
+      minify_html: true
+  - with-pdf:
+      cover_title: 'СУБД POSTGRESQL'
+      cover_subtitle: 'Шпоргалка/черновик по СУБД Postgres'
+      output_path: PostgreSQL.pdf
+      verbose: true
+      
+extra_css:
+    - assets/extra.css
+
+extra_javascript:
+  - assets/extra.js
+  - assets/tex-mml-chtml.js
+  - assets/tablesort.min.js
+  - assets/tablesort.js
+
+theme:
+  name: material
+  custom_dir: material
+  language: ru
+  features:
+    - content.tabs.link
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: red
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/img/favicon/favicon.png
+  logo: assets/img/logo/logo.svg
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      linenums: true
+  - footnotes
+  - toc:
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  - meta
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.keys
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - markdown_blockdiag:
+      format: svg
+  - markdown_include.include
+  - markdown.extensions.attr_list 
+
+
